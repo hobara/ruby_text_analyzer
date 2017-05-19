@@ -1,0 +1,7 @@
+
+Ruby is a great programming language.
+It is object oriented and has many groovy features.
+Some people don't like it, but that's not our problem!
+It's easy to learn.
+It's great.
+To learn more about Ruby, visit the official Ruby Web site today.
