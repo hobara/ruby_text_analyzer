@@ -1,13 +1,13 @@
 class TextAnalyzer
 
   def initialize
-    @input
+    @file_name
   end
 
   def choose_file
     print "Hi there, I'm your text analyzer!\n"
     print "Which file do you want me to analyze? : "
-    @input = gets.chomp
+    @file_name = gets.chomp
   end
 
   def play
@@ -16,7 +16,7 @@ class TextAnalyzer
   end
 
   def analyze
-    if @input[-4..-1] == ".txt"
+    if @file_name[-4..-1] == ".txt"
       valid_analyze
     else
       invalid_operation
@@ -27,7 +27,7 @@ class TextAnalyzer
   private
 
   def valid_analyze
-    lines = File.readlines(@input)
+    lines = File.readlines(@file_name)
     text = lines.join
     puts "\n----- Analysis of the text file -----\n"
     paragraph_count = text.split(/\n\n/).length
@@ -57,7 +57,7 @@ class TextAnalyzer
     print "Invalid file name!\n"
     print "It should be ending with '.txt'\n"
     print "Which file do you want me to analyze? : "
-    @input = gets.chomp
+    @file_name = gets.chomp
   end
 
 end
